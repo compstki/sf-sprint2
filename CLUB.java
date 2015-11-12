@@ -26,10 +26,17 @@ public class CLUB
 
     private void setUpMemberList() throws IOException
     {
+        // First user message
+        System.out.println("ScotFit Club: Membership BMI update");
+        System.out.println("** Preparing to read data file.");
+        
         // read file, fetch data as String array containing the rows
         String[] dataRows = bmiFile.readCSVtable();
         // calculate the number of member rows, skip headings
         noOfMembers = dataRows.length - 1;
+
+        // update user with number of rows with membership details
+        System.out.println("** " + noOfMembers + " rows read.\n\n");
     }
 
     public void displayMembers() {
